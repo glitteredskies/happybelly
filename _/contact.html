@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Belly</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <header id="title">
+    <div>
+      <h1>Happy Belly</h1>
+    </div>
+
+    <nav id="nav">
+      <div class="navbar">
+        <ul>
+          <li><a href="welcome.html">welcome</a></li>
+          <li><a href="menu.html">menus</a></li>
+          <li><a href="reservation.html">reservation</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Send a message directly to us using the form below, and we’ll get back to you as soon as possible. <br><em>Fields with * are required.</em></p>
+    </section>
+
+    <section class="form">
+      <form action="#" method="post" name="contactform">
+
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" size="60" />
+          <span id="name_msg"></span>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" size="30" />
+          <span id="email_msg"></span>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="number" name="phone" size="30" />
+          <span id="phone_msg"></span>
+        </div>
+
+        <div>
+          <label for="msg">Message</label>
+          <input id="msg" type="text" name="msg" size="400" />
+          <span id="msg_msg"></span>
+        </div>
+
+        <div>
+          <button type="submit" name="submit" id="submit" class="submit-form" style="vertical-align:middle"><span>Submit</span></button>
+        </div>
+      </form>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <div id="footer">
+      <ul class="groupOne">
+        <li id="home"><a href="index.html">Happy Belly</a></li>
+        <li id="socialmedia"><a href="https://instagram.com"><img class="icon" src="images/insta.svg" alt="icon for instagram" /></a></li>
+        <li id="socialmedia"><a href="https://facebook.com"><img class="icon" src="images/facebook.svg" alt="icon for facebook" /></a></li>
+      </ul>
+      <ul>
+        <li><strong>LOCATION</strong> 4 Remuera Road, Auckland 1050 | <strong>HOURS</strong> Tuesday-Sunday, 11AM - Late</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+  /* This script validates content of form based on specific rules */
+
+    window.onload = init;
+
+    /* When page loads attach event to validate form */
+    function init() {
+      var formsubmit = document.getElementById('submit');
+      if (formsubmit) {
+        formsubmit.onclick = checkForm;
+      }
+    }
+
+    /* Test fields in form */
+    function checkForm() {
+      var name = document.getElementById('name').value;
+      var name_msg = document.getElementById('name_msg');
+      var valid = true;
+
+      // First name required, > 2 letters
+      if (name.length < 2) {
+        name_msg.innerHTML = "Name should be at least 2 letters in length.";
+        name_msg.className = 'error';
+        valid = false;
+      } else {
+        name_msg.innerHTML = "";
+        name_msg.className = '';
+      }
+
+        var email = document.getElementById('email').value;
+        var email_msg = document.getElementById('email_msg');
+        var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        // Email required, must be valid email address
+        if (!emailRegExp.test(email)) {
+          email_msg.innerHTML = "Must be a valid email address."
+          email_msg.className = 'error';
+          valid = false;
+        } else {
+          email_msg.innerHTML = "";
+          email_msg.className = '';
+        }
+
+        var name = document.getElementById('msg').value;
+        var name_msg = document.getElementById('msg_msg');
+        var valid = true;
+
+        // Message required, > 50 letters
+        if (msg.length < 50) {
+          msg_msg.innerHTML = "Message should be at least 50 letters in length.";
+          msg_msg.className = 'error';
+          valid = false;
+        } else {
+          msg_msg.innerHTML = "";
+          msg_msg.className = '';
+        }
+
+        return valid;
+    }
+    </script>
+
+</body>
+</html>
