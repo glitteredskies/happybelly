@@ -1,0 +1,38 @@
+section {
+  padding-top: 20px;
+
+  div {
+    @include clearfix;
+    text-align: justify;
+
+    div.text {
+      padding: 20px;
+    }
+
+    img {
+      width: 400px;
+      padding: 0 20px;
+      float: left;
+
+      @include breakpoint($tablet){
+        display: none;
+      }
+    } //img
+
+    img.team {
+      float: right;
+    }
+
+    #googleMap {
+      width: 400px;
+      height: 203px;
+      margin: 0 20px;
+      float: left;
+      background-color: grey;
+
+      @include breakpoint($tablet){
+        display: none;
+      }
+    }
+  }
+}

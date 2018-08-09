@@ -1,0 +1,38 @@
+div.hgroup {
+  text-align: center;
+  h1 {
+    padding: 20px;
+    font-size: 50pt;
+    line-height: 80%;
+  }
+  a {
+    position: relative;
+    top: 40px;
+    color: $light;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 30pt;
+
+    &:hover {
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+}
+
+div.timer {
+  display: block;
+  text-align: center;
+  padding-top: 100px;
+
+  p {
+    font-size: 50px;
+    font-weight: $heavy;
+    color: $dark;
+    padding-top: 15px;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+}

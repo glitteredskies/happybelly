@@ -1,0 +1,14 @@
+{
+  "name": "happybelly",
+  "version": "0.0.1",
+  "description": "Project for IT5038",
+  "author": "Judith M",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "grunt": "^1.0.2",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "matchdep": "^2.0.0"
+  }
+}

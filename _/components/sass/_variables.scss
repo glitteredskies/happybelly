@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Emblema+One|Montserrat:200,400,800');
+
+@include border-box-sizing; //uses border box sizing like the old IE
+
+//Add Color Palette
+$yellow        : #e8c543;
+$light         : #f0e4b9;
+$dark          : #0f233e;
+$red           : #8c0d17;
+
+$backgroundColor    : $dark;
+$typeDefault        : $light;
+$navForeground      : $light;
+$navHover           : $red;
+
+//Font variables
+$fontfamilyTitle          : 'Emblema One', Helvetica, sans-serif;
+$fontfamilyMain           : Montserrat, Arial, sans-serif;
+
+$thin    : 200;
+$normal  : 400;
+$heavy   : 800;
+
+$titleFont  : 2em/2em $fontfamilyTitle;
+$headFont   : $heavy 1em/1.5em $fontfamilyMain;
+$mainFont   : $thin 1em/1.5em $fontfamilyMain;
+$navFont    : 1em/1em $fontfamilyTitle;
+
+$titleColor : $yellow;
+
+// breakpoints
+$mobile: max-width 475px;
+$tablet: max-width 610px;

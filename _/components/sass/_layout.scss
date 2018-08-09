@@ -1,0 +1,100 @@
+// susy setup -----
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+@include border-box-sizing;
+
+
+// layout -----
+// content -----
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+
+    header {
+      display: block;
+    }
+
+    .spacemaker {
+      height: 30px;
+    }
+
+    div.content {
+      @include border-top-radius(10px);
+      margin: auto;
+      width: 90%;
+      background-color: rgba(15, 35, 62, .5);
+      min-height: 76%;
+      position: relative;
+    } //div.content
+
+    .layout {
+      @include container;
+      padding: 3%;
+    } //.layout
+
+    div.footer {
+      width: 100%;
+      background: $dark;
+      margin: 0 auto;
+	  	min-height:30px;
+      text-align: center;
+
+      section {
+        padding: 0;
+        margin: 0 auto;
+
+        ul {
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0 20px 0 20px;
+
+          &.groupTwo {
+            @include breakpoint($mobile){
+              display: none;
+            }
+          }
+
+
+          li {
+            display: inline;
+            padding: 0 5px;
+          }
+        }
+
+      } //#footer
+    }
+
+    div.navbar {
+      ul {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+
+        @include breakpoint($mobile){
+          display: block;
+        } //breakpoint
+
+        li {
+          display: inline;
+          padding: 0 25px 25px 0;
+
+          @include breakpoint($mobile){
+            display: block;
+            padding: 0 0 10px 0;
+          } //breakpoint
+
+          .contact {
+            padding: 0 0 25px 0;
+          }
+        } //li nav
+      }
+    }
+
+  } //body
+} //html

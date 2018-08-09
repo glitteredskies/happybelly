@@ -1,0 +1,103 @@
+$body-bg: transparent;
+html {
+  height: 100%;
+
+  background: url('../../images/steamCooker.jpeg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+  body {
+
+    strong {
+      font-weight: $heavy;
+    } //strong
+
+    color: $light;
+    font: $mainFont;
+    line-height: 160%;
+    font-weight: $thin;
+
+    h1 {
+      color: $titleColor;
+      font: $titleFont;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 50px;
+
+      a {
+        color: $titleColor;
+        text-decoration: none;
+      }
+    } //h1
+
+    h2 {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-weight: $heavy;
+      line-height: 40px;
+
+      @include breakpoint($mobile){
+        text-align: center;
+      }
+
+
+    } //h2
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: $heavy;
+      font-size: 1.2em;
+
+    } //h3
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: $normal;
+    }
+
+    nav {
+
+      .navbar {
+        text-align: center;
+
+        a {
+          font: $navFont;
+          color: $light;
+          text-decoration: none;
+
+          &:hover {
+            color: $red;
+            text-decoration: underline;
+          } //&:hover
+
+          &.activePage {
+            color: $red;
+            text-decoration: underline;
+          }
+        } //a
+      } //.navbar
+    } //nav
+
+    div.footer {
+
+
+      .home a {
+        color: $titleColor;
+        font: $titleFont;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+      } //home
+
+      .socialmedia a {
+        span {
+          display: none;
+        } //span
+        color: $light;
+      } //socialmedia
+
+    } //footer
+  } //body
+} //html
